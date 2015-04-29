@@ -1,5 +1,5 @@
 {
-  "name": "{YOUR APP NAME HERE}",
+  "name": "baseline",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -27,8 +27,10 @@
     "phantomjs": "^1.9.16"
   },
   "browserify": {
+    "debug": true,
     "transform": [
-      "babelify"
+      "babelify",
+      "partialify"
     ]
   }
 }

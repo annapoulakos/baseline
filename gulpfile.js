@@ -8,10 +8,7 @@ var gulp = require('gulp'),
     distPath = 'build/';
 
 gulp.task('browserify', function () {
-    return browserify({
-        debug: true
-    })
-    .transform(babelify)
+    return browserify()
     .require('./source/index.js', {
         entry: true
     })
