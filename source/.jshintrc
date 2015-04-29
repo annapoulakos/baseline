@@ -1,0 +1,8 @@
+{
+    "esnext": true,
+    "node": true,
+    "strict": false,
+    "globalstrict": false,
+    "node": true,
+    "predef": ["angular", "$traceurRuntie"]
+}
