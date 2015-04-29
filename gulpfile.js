@@ -9,6 +9,8 @@ var gulp = require('gulp'),
 
 gulp.task('browserify', function () {
     return browserify()
+    .transform(babelify)
+    //.transform(partialify)
     .require('./source/index.js', {
         entry: true
     })
