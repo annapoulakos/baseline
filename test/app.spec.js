@@ -4,23 +4,26 @@ describe('Application: ', function () {
         return deps.indexOf(m) >= 0;
     };
 
+    beforeEach(module('app'));
+
     beforeEach(function () {
         app = angular.module('app');
+        deps = app.requires;
     });
+
+    beforeEach(inject(function(EventBus) {
+        eb = EventBus;
+    }));
 
     it('should be registered: ', function () {
         expect(app).not.toBe(null);
-    });
-
-    beforeEach(function () {
-        deps = app.requires;
     });
 
     it('should have Services as a dependency', function () {
         expect(hasModule('Services')).toBe(true);
     });
 
-    it('should have an EventBus service', inject(function(EventBus) {
-        expect(EventBus).not.toBe(null);
-    }));
+    it('should have an EventBus service', function () {
+        expect(eb).not.toBe(null);
+    });
 });
