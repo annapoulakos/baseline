@@ -22,24 +22,4 @@ describe('Application: ', function () {
     it('should have Services as a dependency', function () {
         expect(hasModule('Services')).toBe(true);
     });
-
-    it('should have an EventBus service', function () {
-        expect(eb).not.toBe(null);
-
-        describe('EventBus service: ', function () {
-            it('should fail initial deregistration check', function () {
-                expect(eb._HasDeregistrationFunction('aaaa')).toBe(false);
-            });
-
-            it('should generate a guid on registration: ', function () {
-                var guid = eb.Register('signal', function () {});
-                expect(guid).not.toBe(null);
-            });
-
-            it('should pass deregistration check: ', function () {
-                var guid = eb.Register('signal', function () {});
-                expect(eb._HasDeregistrationFunction(guid)).toBe(true);
-            });
-        });
-    });
 });
