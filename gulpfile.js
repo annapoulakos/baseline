@@ -29,4 +29,8 @@ gulp.task('karma', function (done) {
     }, done);
 });
 
-gulp.task('default', ['browserify']);
+gulp.task('watch', function () {
+    gulp.watch('source/**/*.*', ['browserify']);
+});
+
+gulp.task('default', ['watch']);
