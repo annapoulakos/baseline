@@ -1,4 +1,4 @@
 /* Base entry point */
-import Services from './services';
+import angular from 'angular';
 
-angular.module('app', [Services.name]);
+angular.module('app', []);
