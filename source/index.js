@@ -1,4 +1,12 @@
-/* Base entry point */
-import Services from './services';
+import angular from 'angular';
+import ItemsControllerModule from './itemsController';
+import EventBusModule from './eventBus';
+import ButtonDirectiveModule from './buttonDirective';
 
-angular.module('app', [Services.name]);
+angular.module('OurTestApplication', [
+    ItemsControllerModule.name,
+    EventBusModule.name,
+    ButtonDirectiveModule.name
+]);
+
+export default OurItemsModule;
