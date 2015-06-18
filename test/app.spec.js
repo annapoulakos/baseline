@@ -18,8 +18,4 @@ describe('Application: ', function () {
     it('should be registered: ', function () {
         expect(app).not.toBe(null);
     });
-
-    it('should have Services as a dependency', function () {
-        expect(hasModule('Services')).toBe(true);
-    });
 });
