@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import angular from 'angular';
 import ItemsControllerModule from './itemsController';
 import EventBusModule from './eventBus';
@@ -11,9 +10,3 @@ angular.module('OurTestApplication', [
 ]);
 
 export default OurItemsModule;
-=======
-/* Base entry point */
-import angular from 'angular';
-
-angular.module('app', []);
->>>>>>> origin/master
