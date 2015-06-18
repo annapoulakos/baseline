@@ -10,7 +10,7 @@ var gulp = require('gulp'),
 gulp.task('browserify', function () {
     return browserify()
     .transform(babelify)
-    //.transform(partialify)
+    .transform(partialify)
     .require('./source/index.js', {
         entry: true
     })
@@ -29,4 +29,8 @@ gulp.task('karma', function (done) {
     }, done);
 });
 
-gulp.task('default', ['browserify']);
+gulp.task('watch', function () {
+    gulp.watch('source/**/*.*', ['browserify']);
+});
+
+gulp.task('default', ['watch']);
