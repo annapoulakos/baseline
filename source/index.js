@@ -1,5 +1,5 @@
 import angular from 'angular';
-import ItemsControllerModule from './itemsController';
+import ItemsControllerModule from './items/itemsController';
 import EventBusModule from './eventBus';
 import ButtonDirectiveModule from './buttonDirective';
 

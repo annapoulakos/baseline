@@ -1,5 +1,5 @@
 var ButtonDirectiveModule = angular.module('ButtonDirectiveModule', []);
-var buttonTemplate = require('buttonDirectiveTemplate.html');
+var buttonTemplate = require('./buttonDirectiveTemplate.html');
 
 class ButtonDirectiveController {
     constructor () {}

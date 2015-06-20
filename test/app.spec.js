@@ -1,21 +1,21 @@
-describe('Application: ', function () {
-    var deps, app, eb;
-    var hasModule = function (m) {
-        return deps.indexOf(m) >= 0;
+describe('Main Application', function () {
+    var application, dependencies;
+
+    var hasModule = function (mod) {
+        return dependencies.indexOf(mod) >= 0;
     };
 
-    beforeEach(module('app'));
-
+    beforeEach(module('OurTestApplication'));
     beforeEach(function () {
-        app = angular.module('app');
-        deps = app.requires;
+        application = angular.module('OurTestApplication');
+        dependencies = application.requires;
     });
-
-    beforeEach(inject(function(EventBus) {
-        eb = EventBus;
-    }));
 
     it('should be registered: ', function () {
         expect(app).not.toBe(null);
+    });
+
+    it('should have OurItemsModule.ItemsController registered: ', function () {
+        expect(hasModule('OurItemsModule.ItemsController')).toBe(true);
     });
 });
