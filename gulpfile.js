@@ -23,7 +23,7 @@ var tasks = [
     }
 ];
 
-tsks.forEach(function (task) {
+tasks.forEach(function (task) {
     gulp.task(task.name, function () {
         return browserify({
             entries: task.entries,
